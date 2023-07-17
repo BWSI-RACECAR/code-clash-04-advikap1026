@@ -6,15 +6,16 @@ class Solution:
             
             #TODO: Write code below to returnn an int with the solution to the prompt.
             maxDist = 0
-            # for i in range(checkpoints.len):
-            #      for j in range(checkpoints.len):
-            #           if(i == j):
-            #                continue 
-            #           dist = abs(j-i)
-            #           if dist > maxDist:
-            #                maxDist = dist 
-            # return masDist 
+            for i in range(len(checkpoints)):
+                # Traverse the list from 0 to n-i-1
+                # (The last element will already be in place after first pass, so no need to re-check)
+                for j in range(0, (len(checkpoints))-i-1):
 
+                    # Swap if current element is greater than next
+                    if checkpoints[j] > checkpoints[j+1]:
+                        checkpoints[j], checkpoints[j+1] = checkpoints[j+1], checkpoints[j]
+
+            
             for i in range(len(checkpoints)-1):
                  firstPoint = checkpoints[i]
                  secondPoint = checkpoints[i+1]
