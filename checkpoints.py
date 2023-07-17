@@ -18,7 +18,7 @@ class Solution:
             for i in range(len(checkpoints)-1):
                  firstPoint = checkpoints[i]
                  secondPoint = checkpoints[i+1]
-                 dist = abs(firstPoint - secondPoint)
+                 dist = abs(secondPoint - firstPoint)
                  if dist > maxDist:
                       maxDist = dist
             return maxDist
