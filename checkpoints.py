@@ -15,7 +15,7 @@ class Solution:
             #                maxDist = dist 
             # return masDist 
 
-            for i in range(checkpoints.len-1):
+            for i in range(len(checkpoints)-1):
                  firstPoint = checkpoints[i]
                  secondPoint = checkpoints[i+1]
                  dist = abs(firstPoint - secondPoint)
